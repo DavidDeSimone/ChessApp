@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="edu.rutgers.cs.chess41"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="19" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="edu.rutgers.cs.chess41.MainActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="edu.rutgers.cs.chess41.GameActivity"
+            android:label="@string/game_activity_display_message"
+            android:parentActivityName="edu.rutgers.cs.chess41.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.rutgers.cs.chess41.MainActivity" />
+        </activity>
+        <activity 
+            android:name="edu.rutgers.cs.chess41.RenameActivity"
+            android:parentActivityName="edu.rutgers.cs.chess41.GameActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.rutgers.cs.chess41.GameActivity" />
+        </activity>
+        <activity
+            android:name="edu.rutgers.cs.chess41.OpenActivity"
+            android:label="@string/open_activity_display_message"
+            android:parentActivityName="edu.rutgers.cs.chess41.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.rutgers.cs.chess41.MainActivity" />
+        </activity>
+        <activity
+            android:name="edu.rutgers.cs.chess41.OpenFileActivity"
+            android:label="@string/open_activity_display_message"
+            android:parentActivityName="edu.rutgers.cs.chess41.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.rutgers.cs.chess41.MainActivity" />
+        </activity>
+        <activity
+            android:name="edu.rutgers.cs.chess41.ReplayActivity"
+            android:label="@string/title_activity_replay" >
+        </activity>
+    </application>
+
+</manifest>

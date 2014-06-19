@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+   <View
+	  	android:layout_width="1dp"
+	  	android:layout_height="0dp"
+	  	android:layout_weight="0.1" />
+   
+    <TextView
+        android:id="@+id/whose_turn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textSize="20sp" />
+
+    <fragment
+        android:id="@+id/board_fragment"
+        android:name="edu.rutgers.cs.chess41.BoardFragment"
+        android:layout_width="335dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        tools:layout="@layout/board_fragment" />
+
+    <LinearLayout
+        style="?android:attr/buttonBarStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/button_undo"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:onClick="undo"
+            android:enabled="false"
+            android:text="@string/undo" />
+        
+        <Button
+            android:id="@+id/button_ai_move"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:onClick="aiMove"
+            android:text="@string/ai_move" />
+
+        <Button
+            android:id="@+id/button_draw"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:onClick="offerDraw"
+            android:text="@string/offerDraw" />
+
+		<Button
+			android:id="@+id/button_resign"
+			android:layout_width="0dp"
+			android:layout_height="fill_parent"
+			android:layout_weight="1"
+			android:textSize="16sp"
+			android:onClick="resign"
+			android:text="@string/resign" />   
+       
+   </LinearLayout>
+    
+    <Button
+        android:id="@+id/button_exit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="showSaveDialog"
+        android:text="@string/exit_game"
+        android:visibility="gone" />
+    
+    <View
+	  	android:layout_width="1dp"
+	  	android:layout_height="0dp"
+	  	android:layout_weight="1" />
+
+</LinearLayout>
